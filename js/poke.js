@@ -30,6 +30,7 @@ const input = document.getElementById('busqueda');
         document.getElementById("portafolio").innerHTML= "";
 
         q =  document.getElementById('busqueda').value;
+        q = q.toLowerCase();
         urlCompleta = baseUrl +  q + "/";
         getData();
 

@@ -32,6 +32,7 @@ const input = document.getElementById('busqueda');
         getData();
 
         q =  document.getElementById('busqueda').value;
+        q = q.toLowerCase();
 
         urlCompleta = rickUrl + q;
         getData2();
