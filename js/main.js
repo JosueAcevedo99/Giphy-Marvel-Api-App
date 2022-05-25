@@ -45,16 +45,31 @@ const input = document.getElementById('busqueda');
 
     const getData = async () => {
 
+      const container = document.querySelector('#portafolio');
+      let contentHTML = '';
+
         await fetch(urlCompleta).then((response) => {
             return response.json();
         }).then((giphy) => {
             for(let i=0; i<giphy.data.length; i++){
 
-                const gif = document.createElement('img');
-                gif.src = giphy.data[i].images['original'].url;
-                gif.className = "mb-3";
-                document.getElementById("portafolio").appendChild(gif);
+                const urlgif = giphy.data[i].url;
+                const imgGif = giphy.data[i].images['original'].url;
+                const tittle = giphy.data[i].title;
+                //const gif = document.createElement('img');
+                // gif.src = giphy.data[i].images['original'].url;
+                // gif.className = "mb-3";
+                // document.getElementById("portafolio").appendChild(gif);
+
+                contentHTML += `
+                <div class="col-md-4">
+                    <a href="${urlgif}" target="_blank">
+                      <img src="${imgGif}" class="img-thumbnail">
+                    </a>
+                    <h3 class="title">${tittle}</h3>
+                </div>`;
             }
+            container.innerHTML = contentHTML;
         })
 
     }

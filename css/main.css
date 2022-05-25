@@ -3,11 +3,68 @@ img .img-thumbnail{
     height: 80%;
 }
 
+.img-thumbnail:hover{
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
 a{
     text-decoration: none !important;
     color: rgb(255, 255, 255) !important;
+    margin-left: 0.2rem !important;
+}
+
+.btnmarvel:hover{
+    background-color: rgba(167, 255, 73, 0.5) !important;
+}
+
+.btnpoke:hover{
+    background-color: rgba(167, 255, 73, 0.5) !important;
+}
+
+.btnrym:hover{
+    background-color: rgba(167, 255, 73, 0.5) !important;
 }
 
 .colorpoke{
     background-color: darkorange !important;
 }
+
+.img-poke{
+    width: 120%;
+    height: 80%;
+}
+
+
+
+
+
+/* 
+/* small queries */
+/*
+@media (max-width: 576px) {
+    
+
+    .btnpoke{ 
+        visibility:hidden;
+    }
+    .btnpoke:before{
+        visibility:visible;
+        content: "Pokemon" !important;
+        font-size: small !important;
+        background-color: darkorange !important;
+    }
+
+    .btnrym{
+        visibility:hidden;
+    }
+
+    .btnrym:before{
+        visibility:visible;
+        content: "R y M" !important;
+        font-size: small !important;
+        background-color:rgb(13, 110, 253);
+    }
+
+} */
