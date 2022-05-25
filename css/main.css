@@ -1,0 +1,13 @@
+img .img-thumbnail{
+    width: 80%;
+    height: 80%;
+}
+
+a{
+    text-decoration: none !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.colorpoke{
+    background-color: darkorange !important;
+}
